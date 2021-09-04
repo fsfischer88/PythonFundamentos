@@ -17,6 +17,8 @@
 # len(nome)
 
 import os
+os.system('cls' if os.name == 'nt' else 'clear')
+print('*'*10,'Sistema de Cadastro de Produtos','*'*10, '\n')
 valido = False
 produtos = {}
 
@@ -33,7 +35,7 @@ while(not valido):
 
 produtos['descrição'] = input('digite a sua descrição: ')
 
-valido = False
+valido = False # atribuindo novo valor para realizar outra validação
 # - A categoria deve possuir mais de 5 caracteres;
 while(not valido):
     categoria = input('digite a categoria do produto: ')
@@ -46,18 +48,20 @@ while(not valido):
         valido = True
         produtos['categoria'] = categoria  # - Todos os dados devem estar armazenados em um dicionário;
 
-valido = False
+valido = False # atribuindo novo valor para realizar outra validação
 # - Permitir casdastras produtos com valores maiores que zero;
 while(not valido):
     valor = float(input('digite seu valor: '))
     if(not valor > 0):
         print('O valor deve ser maior que zero!')
-        input('Digite o novo valor para continuar: ')
+        input('Digite o enter para continuar: ')
          # if ternario no Python, se for == 'nt (windows) executa cls senão clear
         os.system('cls' if os.name == 'nt' else 'clear')
     else:
         valido = True
         produtos['valor'] = valor  # - Todos os dados devem estar armazenados em um dicionário;
+
+print(produtos)
       
     
 
