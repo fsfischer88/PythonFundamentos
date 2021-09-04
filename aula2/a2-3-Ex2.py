@@ -20,6 +20,7 @@ import os
 valido = False
 produtos = {}
 
+# - O nome do produto deve ter mais de 3 letras;
 while(not valido):
     nome = input('digite o nome do produto: ')
     if(not len(nome) > 3):
@@ -28,11 +29,12 @@ while(not valido):
         os.system('cls' if os.name == 'nt' else 'clear')
     else:
         valido = True
-        produtos['nome'] = nome
+        produtos['nome'] = nome  # - Todos os dados devem estar armazenados em um dicionário;
 
 produtos['descrição'] = input('digite a sua descrição: ')
 
 valido = False
+# - A categoria deve possuir mais de 5 caracteres;
 while(not valido):
     categoria = input('digite a categoria do produto: ')
     if(not len(categoria) > 5):
@@ -42,9 +44,10 @@ while(not valido):
        
     else:
         valido = True
-        produtos['categoria'] = categoria
+        produtos['categoria'] = categoria  # - Todos os dados devem estar armazenados em um dicionário;
 
 valido = False
+# - Permitir casdastras produtos com valores maiores que zero;
 while(not valido):
     valor = float(input('digite seu valor: '))
     if(not valor > 0):
@@ -54,7 +57,7 @@ while(not valido):
         os.system('cls' if os.name == 'nt' else 'clear')
     else:
         valido = True
-        produtos['valor'] = valor
+        produtos['valor'] = valor  # - Todos os dados devem estar armazenados em um dicionário;
       
     
 
