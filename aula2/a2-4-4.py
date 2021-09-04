@@ -18,3 +18,9 @@ print('\n')
 for p in produtos_lista:
     for (c,v) in p.items():
         print(c,v)
+    print('\n')
+
+nomes = [ ['Ana', 'Paulo'], ['Silva','Souza'] ]
+for n in nomes:
+    for s in n:
+        print(s)
