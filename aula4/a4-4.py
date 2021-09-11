@@ -10,9 +10,12 @@
 
 
 arquivo = open('aula4/categoria.txt', 'r')
-linhas = arquivo.readline()
+# Readlines = cria uma lista de string com todas as linhas do arquivo
+linhas = arquivo.readlines()
 
 for l in linhas :
-    print(l.strip())
+    l_sem_barra_n = l.strip() # Strip remove \n, \t e espacos em branco
+    print(l_sem_barra_n)
 
+# Fechando o arquivo
 arquivo.close()
